@@ -5,6 +5,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = function (eleventyConfig) {
   // PLUGINS
   eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addPassthroughCopy("admin");
 
   // shortcode to render markdown from string => {{ STRING | markdown | safe }}
   eleventyConfig.addFilter('markdown', function(value) {
